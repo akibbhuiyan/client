@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# ThugStore
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+ ### Project live site     [Live Preview](https://thug-store.vercel.app/).
 
-In the project directory, you can run:
+Thug Store is a Mern-stack  E-Commerce web application built using React.js, Node.js, MongoDB, and Firebase. The website allows users to create an account, log in, and buy Product. It also features a dashboard where users can manage their Product. The use of React Router enables private routing for authenticated users, and Firebase handles user authentication. The application leverages the MERN (MongoDB, Express.js, React.js, and Node.js) stack for efficient development and deployment. The website's clean and modern user interface provides an optimal user experience.
 
-### `npm start`
+  ## Project Functionality :
+   -  Thug Store is a full-stack web application developed with React.js, Node.js, MongoDB, and  Firebase.
+   -  Users can create an account, log in, and Buy Product.
+   -  The website features a Cart where users can manage their Product.
+   -  Then User can fill up form and pay the price by Stripe Payment Menthod,
+   -  When User pay for product he/she can download the slip in  pdf
+   -  Private routing for authenticated users is implemented using React Router.
+   -  Firebase handles user authentication.
+   -  The application leverages the MERN stack for efficient development and deployment.
+   -  The website has a clean and modern user interface for optimal user experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  ## Project Feature:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- This project use <code>react.js</code> as a front-end library.
+- Create a admin route feature for only admin can access.
+- Create a user route feature only seller can access.
+- Payment system feature for user to pay. Using <code>stripe</code>.
+- <code>react-query</code> - used for fetching data from server and loading state and refetch
+- <code>axios</code> - Explore the use of axios and used to get server data.
+- <code>date-fns</code> - used to format the date.
+- <code>firebase</code> - as authentication service. And to host this website.
+- <code>react-router-dom</code> - Using react-router-dom make all the route for this project.
+- <code>react-hook-form</code> - Using get form values, show error message and some basic validation.
+- <code>react-hot-toast</code> - To show beautiful message for user.
+- <code>react-icons</code> - Used for site icon.
