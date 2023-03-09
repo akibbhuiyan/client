@@ -9,12 +9,10 @@ const Information = ({ fade }) => {
   const {
     register,
     handleSubmit,
-    watch,
+
     formState: { errors },
   } = useForm();
-  const onSubmit = async (data) => {
-    console.log(data);
-  };
+  const onSubmit = async (data) => {};
   return (
     <div className={`profile_Info ${fade}`}>
       <h3 className="profile_info-title">Personal Details</h3>

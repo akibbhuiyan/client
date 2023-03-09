@@ -80,7 +80,7 @@ const Shop = () => {
     });
     return (newVal = ["All", ...new Set(newVal)]);
   };
-  console.log(filterItem);
+
   const categories = getUniqueData(filterproducts, "category");
   const updateFilter = (e) => {
     let value = e.target.value;
