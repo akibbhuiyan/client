@@ -2,14 +2,10 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Product.css";
 import { FiEye, FiLink, FiShoppingCart } from "react-icons/fi";
-import { toast } from "react-toastify";
 
 import Modal from "react-modal";
 import QuickView from "./QuickView/QuickView";
-import {
-  addToDatabaseCart,
-  getDatabaseCart,
-} from "../../database/databaseManager";
+
 import { AuthContext } from "../../Context/UserContext";
 
 const ProductItem = ({ product, products }) => {
@@ -17,9 +13,6 @@ const ProductItem = ({ product, products }) => {
 
   const [modalIsOpen, setIsOpen] = useState(false);
   const [clickedproduct, setclickedproduct] = useState("");
-  function openModal() {
-    setIsOpen(true);
-  }
 
   function closeModal() {
     setIsOpen(false);

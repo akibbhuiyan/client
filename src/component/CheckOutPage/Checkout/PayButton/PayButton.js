@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { format } from "date-fns";
 import axios from "axios";

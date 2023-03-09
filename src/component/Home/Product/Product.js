@@ -1,16 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+
 import "./Product.css";
-import { FiEye, FiLink, FiShoppingCart } from "react-icons/fi";
-import { toast } from "react-toastify";
+
 import { HiArrowRight, HiArrowLeft } from "react-icons/hi";
-import Modal from "react-modal";
-import QuickView from "./QuickView/QuickView";
-import {
-  addToDatabaseCart,
-  getDatabaseCart,
-} from "../../database/databaseManager";
+
 import ProductItem from "./ProductItem";
 import Loader from "../../Sharder/Loader/Loader";
 

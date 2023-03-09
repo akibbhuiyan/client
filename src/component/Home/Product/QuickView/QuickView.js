@@ -15,7 +15,6 @@ const QuickView = ({ id, products, handleAddToCart, closeModal }) => {
   const { quantity, setQuantity } = useContext(AuthContext);
   const [product, setproduct] = useState({});
   const {
-    _id,
     title,
     discountPercentage,
     category,

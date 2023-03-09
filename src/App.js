@@ -1,7 +1,6 @@
 import "./App.css";
 import { ToastContainer } from "react-toastify";
 import { Route, Routes } from "react-router-dom";
-import NavBar from "./component/Sharder/NavBar/NavBar";
 import Home from "./component/Home/Home";
 import "react-toastify/dist/ReactToastify.css";
 import ProductPage from "./component/ProductPage/ProductPage";
@@ -13,7 +12,6 @@ import PrivateRoute from "./component/PrivateRoute/PrivateRoute";
 import DashboardPage from "./component/Dashboard/DashboardPage.js";
 import Invoice from "./component/Invoice/Invoice";
 import ScrollToTop from "./component/Sharder/ScrollToTop/ScrollToTop";
-import Loader from "./component/Sharder/Loader/Loader";
 import Footer from "./component/Sharder/Footer/Footer";
 function App() {
   return (

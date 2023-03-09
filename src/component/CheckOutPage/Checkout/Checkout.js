@@ -1,8 +1,7 @@
-import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { FiDatabase } from "react-icons/fi";
+
 import { AuthContext } from "../../Context/UserContext";
 import "./Checkout.css";
 import PayButton from "./PayButton/PayButton";
@@ -19,7 +18,7 @@ const Checkout = () => {
   const {
     register,
     handleSubmit,
-    watch,
+
     formState: { errors },
   } = useForm();
   const cartData = getLocalacrtData();

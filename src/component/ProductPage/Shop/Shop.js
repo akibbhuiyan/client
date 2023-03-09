@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
-import { BsSearch } from "react-icons/bs";
-import Spinner from "react-bootstrap/Spinner";
 import ProductItem from "../../Home/Product/ProductItem";
 import "./Shop.css";
 import Loader from "../../Sharder/Loader/Loader";
@@ -12,7 +10,7 @@ const Shop = () => {
   const [filterproducts, setfilterProducts] = useState([]);
   const [filterItem, setFilterItem] = useState("All");
   const [loading, setloading] = useState(true);
-  const [query, setquery] = useState("");
+
   const [paginationCount, setpaginationCount] = useState(0);
   const handlePrevPage = () => {
     if ((paginationCount) => 20) {

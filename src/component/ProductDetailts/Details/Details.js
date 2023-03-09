@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Container, Spinner } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/UserContext";
-import { FiShoppingCart, FiLink } from "react-icons/fi";
+import { FiShoppingCart } from "react-icons/fi";
 import {
   FaFacebookF,
   FaTwitter,
@@ -24,7 +24,6 @@ const Details = (props) => {
     category,
     discountPercentage,
     brand,
-    dimensions,
   } = props.product;
   const [related, setRelated] = useState([]);
   useEffect(() => {

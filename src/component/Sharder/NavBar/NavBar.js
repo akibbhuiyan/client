@@ -12,7 +12,7 @@ function NavBar() {
   const [cartData, setCartData] = useState([]);
   const [scrolled, setscrolled] = useState(false);
   const [searchQuery, setsearchQuery] = useState("");
-  const { logOut, user } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const navigate = useNavigate();
   useEffect(() => {
     const cartData = getDatabaseCart();

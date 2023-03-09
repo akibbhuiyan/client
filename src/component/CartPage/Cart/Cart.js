@@ -2,9 +2,8 @@ import React, { useContext, useState } from "react";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { HiOutlineReply } from "react-icons/hi";
-import UserContext, { AuthContext } from "../../Context/UserContext";
+import { AuthContext } from "../../Context/UserContext";
 import { FaTimes } from "react-icons/fa";
-import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
 import "./Cart.css";
 import { toast } from "react-toastify";
