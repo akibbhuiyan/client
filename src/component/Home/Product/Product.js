@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./Product.css";
 import { FiEye, FiLink, FiShoppingCart } from "react-icons/fi";
 import { toast } from "react-toastify";
-
+import { HiArrowRight, HiArrowLeft } from "react-icons/hi";
 import Modal from "react-modal";
 import QuickView from "./QuickView/QuickView";
 import {
@@ -16,16 +16,32 @@ import Loader from "../../Sharder/Loader/Loader";
 
 const Product = () => {
   const [products, setproduct] = useState([]);
-  const [loadin, setLoading] = useState([]);
+  const [paginationCount, setpaginationCount] = useState(0);
+  const [loadin, setLoading] = useState(true);
 
+  const handlePrevPage = () => {
+    if ((paginationCount) => 20) {
+      setpaginationCount(paginationCount - 10);
+    } else {
+      setpaginationCount(paginationCount);
+    }
+  };
+  const handleNextPage = () => {
+    if ((paginationCount) => 0 && paginationCount <= 90) {
+      setpaginationCount(paginationCount + 10);
+    } else {
+      setpaginationCount(paginationCount);
+    }
+  };
   useEffect(() => {
-    fetch("http://localhost:5000/product")
+    fetch(`https://dummyjson.com/products?limit=12&skip=${paginationCount}`)
       .then((res) => res.json())
       .then((data) => {
-        setproduct(data);
+        setproduct(data.products);
         setLoading(false);
       });
-  }, []);
+  }, [paginationCount]);
+
   if (loadin) {
     return <Loader />;
   }
@@ -42,6 +58,18 @@ const Product = () => {
             {products?.map((product, idx) => (
               <ProductItem key={idx} product={product} products={product} />
             ))}
+          </div>
+          <div className="row">
+            <div className="col-12">
+              <div className="pagination">
+                <button className="pagi-btn" onClick={handlePrevPage}>
+                  <HiArrowLeft /> Prev
+                </button>
+                <button className="pagi-btn" onClick={handleNextPage}>
+                  Next <HiArrowRight />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </Container>

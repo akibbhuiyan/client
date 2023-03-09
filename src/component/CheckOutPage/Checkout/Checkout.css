@@ -86,6 +86,7 @@
 .checkbox-form .checkoutbtn {
   width: auto;
   padding: 16px 54px;
+  margin-bottom: 36px;
 }
 .disabled {
   cursor: not-allowed;

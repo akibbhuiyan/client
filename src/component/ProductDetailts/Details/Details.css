@@ -7,6 +7,13 @@
 .product-details-thumb {
   margin-right: 70px;
   width: 80%;
+  margin-top: 59px;
+}
+.product-details-wrapper {
+  margin-top: 50px;
+}
+.pd-area {
+  padding-bottom: 110px;
 }
 .product-stock {
   margin-bottom: 13px;
@@ -20,6 +27,7 @@
   border: 1px solid rgba(245, 9, 99, 0.1);
   padding: 5px 18px;
 }
+
 .product-details-tab {
   border-bottom: 1px solid #dadce0;
 }

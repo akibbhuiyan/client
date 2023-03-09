@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FiSearch, FiUser } from "react-icons/fi";
 import { BsCart2 } from "react-icons/bs";
 import "./NavBar.css";
@@ -11,7 +11,9 @@ import { AuthContext } from "../../Context/UserContext";
 function NavBar() {
   const [cartData, setCartData] = useState([]);
   const [scrolled, setscrolled] = useState(false);
+  const [searchQuery, setsearchQuery] = useState("");
   const { logOut, user } = useContext(AuthContext);
+  const navigate = useNavigate();
   useEffect(() => {
     const cartData = getDatabaseCart();
     if (cartData) {
@@ -29,6 +31,10 @@ function NavBar() {
     window.addEventListener("scroll", scrolled);
     return () => window.removeEventListener("scroll", scrolled);
   }, []);
+  const handleSearch = (e) => {
+    e.preventDefault();
+    navigate(`/products/${searchQuery} `, { replace: true });
+  };
   return (
     <Navbar
       className={scrolled ? "p-0 header active" : "p-0 header"}
@@ -54,10 +60,14 @@ function NavBar() {
           <div className="header-right ms-lg-5 ms-md-0">
             <ul>
               <li className="search_box">
-                <input type="text" placeholder="Search Here.." />
-                <span>
+                <input
+                  type="text"
+                  placeholder="Search Here.."
+                  onChange={(e) => setsearchQuery(e.target.value)}
+                />
+                <button onClick={handleSearch}>
                   <FiSearch />
-                </span>
+                </button>
               </li>
               <li>
                 {user ? (

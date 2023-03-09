@@ -26,7 +26,6 @@ const PayButton = ({
   grandTotal,
   activeforPayment,
 }) => {
-  const [payId, setPayId] = useState("");
   const { user } = useContext(AuthContext);
   const stripe = useStripe();
   const elements = useElements();
@@ -40,11 +39,13 @@ const PayButton = ({
     if (!error) {
       try {
         const { id } = paymentMethod;
-        const response = await axios.post("http://localhost:5000/payment", {
-          amount: grandTotal * 100,
-          id,
-        });
-        setPayId(response.data.payId);
+        const response = await axios.post(
+          "https://thug-store-server.vercel.app/payment",
+          {
+            amount: grandTotal * 100,
+            id,
+          }
+        );
 
         if (response.data.success) {
           if (shipmentInfo) {
@@ -52,17 +53,17 @@ const PayButton = ({
             shipmentInfo.orderDate = format(new Date(), "PP");
             shipmentInfo.userEmail = user.email;
             shipmentInfo.status = "Pending";
-            shipmentInfo.payId = payId;
+            shipmentInfo.payID = response?.data?.payId;
           } else {
             toast("Please Fill the Shipping info");
           }
-          const response = await axios.post(
-            "http://localhost:5000/addtoDatabase",
+          const responseDb = await axios.post(
+            "https://thug-store-server.vercel.app/addtoDatabase",
             {
               shipmentInfo,
             }
           );
-          if (response.data) {
+          if (responseDb.data) {
             toast("Payment Successfull");
             localStorage.removeItem("productShop");
             navigate(-2, { replace: true });

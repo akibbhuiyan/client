@@ -71,7 +71,7 @@ const UserContext = ({ children }) => {
       product.quantity = quantity;
       newCart = [...cartProduct, product];
     }
-    toast(`${product.name} added Succesfully`);
+    toast(`${product.title} added Succesfully`);
     setCartProduct(newCart);
     addToDatabaseCart(newCart);
     navigate("/cart", { replace: true });

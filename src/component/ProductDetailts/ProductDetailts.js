@@ -8,7 +8,7 @@ const ProductDetailts = () => {
   const { id } = useParams();
   const [product, setProduct] = useState();
   useEffect(() => {
-    fetch(`http://localhost:5000/productDetails?id=${id}`)
+    fetch(`https://dummyjson.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -21,7 +21,7 @@ const ProductDetailts = () => {
       <BreadcrumbArea
         backLink={"home"}
         mainPage={"Products"}
-        productName={product?.name}
+        productName={product?.title}
       />
       {product && <Details product={product} />}
     </>

@@ -32,15 +32,27 @@
   padding-top: 20px;
 }
 .product__ammount {
-  font-weight: 500;
-  font-size: 15px;
+  font-weight: 900;
+  font-size: 20px;
   color: #525258;
+  position: relative;
+  display: block;
+}
+.product__ammount .discount {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 11px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #f50963;
 }
 .product-quantity {
   width: 148px;
   position: relative;
   margin: 10px;
   margin-bottom: 40px;
+  margin-left: 0;
 }
 .cart-minus,
 .cart-plus {
@@ -189,4 +201,7 @@
   color: #525258;
   margin-bottom: 6px;
   margin-right: 10px;
+}
+.product-details-share.product__details-share {
+  margin-top: 10px;
 }

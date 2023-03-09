@@ -17,7 +17,7 @@ const Order = ({ fade, cartProduct }) => {
           {cartProduct.map((product, idx) => (
             <tr key={idx}>
               <th className="text-uppercase" scope="row">
-                {product.payId}
+                {product.payID ? `${product.payID}` : "#MiHpQB"}
               </th>
               <td className="order-data">{product.orderDate}</td>
               <td className="order-status">Pending</td>

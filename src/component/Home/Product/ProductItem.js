@@ -64,6 +64,49 @@ const ProductItem = ({ product, products }) => {
       <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
         <div className="product-item ">
           <div className="product-thumbnail">
+            <Link to={`/productDetails/${product.id}`}>
+              <img src={product.thumbnail} alt={product.title} />
+            </Link>
+            <div className="product-action d-flex flex-column flex-wrap">
+              <button
+                className="product-action-btn"
+                onClick={() => handleProduct(product.id)}
+              >
+                <FiEye />
+                <span className="product-action-tip">Quick view</span>
+              </button>
+
+              <Link
+                to={`/productDetails/${product.id}`}
+                className="product-action-btn"
+              >
+                <button className="product-action-btn">
+                  <FiLink />
+                  <span className="product-action-tip">Product Details</span>
+                </button>
+              </Link>
+            </div>
+            <div className="product-add">
+              <button
+                className="product-add-cart-btn w-100"
+                onClick={() => handleAddToCart(product)}
+              >
+                <FiShoppingCart />
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          <div className="product-content">
+            <h3 className="product-title">
+              <Link to={`/productDetails/${product._id}`}>{product.title}</Link>
+            </h3>
+            <span className="product-price">${product.price}</span>
+          </div>
+        </div>
+      </div>
+      {/* <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+        <div className="product-item ">
+          <div className="product-thumbnail">
             <Link to={`/productDetails/${product._id}`}>
               <img src={product.thumbnail} alt={product.name} />
             </Link>
@@ -103,7 +146,7 @@ const ProductItem = ({ product, products }) => {
             <span className="product-price">${product.price}</span>
           </div>
         </div>
-      </div>
+      </div> */}
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}

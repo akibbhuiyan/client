@@ -16,24 +16,24 @@ const QuickView = ({ id, products, handleAddToCart, closeModal }) => {
   const [product, setproduct] = useState({});
   const {
     _id,
-    name,
-    brand,
+    title,
+    discountPercentage,
     category,
     price,
     description,
-    weight,
-    dimensions,
+    rating,
+    stock,
     thumbnail,
   } = product;
 
   useEffect(() => {
-    fetch("http://localhost:5000/product")
+    fetch(`https://dummyjson.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        const product = data.find((pd) => String(pd._id) === String(id));
-        setproduct(product);
+        setproduct(data);
       });
   }, [id]);
+
   return (
     <div className="modal-content">
       <div className="product-model-wrapper">
@@ -45,14 +45,19 @@ const QuickView = ({ id, products, handleAddToCart, closeModal }) => {
         <div className="row">
           <div className="col-lg-6 col-md-8 mx-auto">
             <div className="product-model-thu">
-              <img src={thumbnail} alt={name} className="w-100" />
+              <img src={thumbnail} alt={title} className="w-100" />
             </div>
           </div>
           <div className="col-lg-6 col-md-8 mx-auto">
             <div className="product-details-wrapper">
-              <h3 className="product-title">{name}</h3>
+              <h3 className="product-title">{title}</h3>
               <p>{description}</p>
-              <span className="product__ammount">${price}</span>
+              <span className="product__ammount">
+                ${price}{" "}
+                <strong className="discount">
+                  {discountPercentage}% Discount
+                </strong>
+              </span>
               <div className="product-quantity">
                 <span
                   className="cart-minus"
@@ -83,7 +88,7 @@ const QuickView = ({ id, products, handleAddToCart, closeModal }) => {
                   <FiShoppingCart />
                   Add to Cart
                 </button>
-                <Link to={`/productDetails/${_id}`}>
+                <Link to={`/productDetails/${id}`}>
                   <button className="product-action-btn">
                     <FiLink />
                     <span className="product-action-tip">Product Details</span>
@@ -91,16 +96,16 @@ const QuickView = ({ id, products, handleAddToCart, closeModal }) => {
                 </Link>
               </div>
               <div className="product-details-weight product__details-more">
-                <p>Weight:</p>
-                <span>{weight}</span>
+                <p>Rating:</p>
+                <span>{rating}</span>
               </div>
               <div className="product-details-category product__details-more">
                 <p>Category:</p>
-                <span>{category}</span>
+                <span className="text-capitalize">{category}</span>
               </div>
               <div className="product-details-dimention product__details-more">
-                <p>Dimensions:</p>
-                <span>{dimensions}</span>
+                <p>Stock:</p>
+                <span>{stock} in Stock</span>
               </div>
               <div className="product-details-share product__details-share">
                 <span>Share:</span>

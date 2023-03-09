@@ -16,7 +16,9 @@ const DashboardPage = () => {
   const [showLoading, setShowLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/productbyUser?email=${user.email}`)
+    fetch(
+      `https://thug-store-server.vercel.app/productbyUser?email=${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setShowLoading(false);

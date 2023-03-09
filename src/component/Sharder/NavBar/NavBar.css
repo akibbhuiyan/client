@@ -40,12 +40,14 @@
   border: 1px solid #79787852;
   outline: none;
 }
-.header-right ul .search_box span {
+.header-right ul .search_box button {
   position: absolute;
   right: 24px;
   top: 47%;
   transform: translateY(-50%);
   color: #525258;
+  border: 0;
+  background-color: transparent;
 }
 .header-right ul li a {
   color: #525258;

@@ -76,7 +76,9 @@ const Cart = () => {
                             </Link>
                           </td>
                           <td className="cart-product-name">
-                            <Link to={`/cart`}>{cartItem.name}</Link>
+                            <Link to={`/productDetails/${cartItem.id}`}>
+                              {cartItem.title}
+                            </Link>
                           </td>
                           <td className="product-price">
                             <span className="amount">${cartItem.price}</span>
@@ -126,8 +128,8 @@ const Cart = () => {
                     <Link
                       to="/checkout"
                       className={
-                        getLocalacrtData.length
-                          ? "checkoutbtn"
+                        cartData.length
+                          ? "checkoutbtn "
                           : "checkoutbtn disabled"
                       }
                     >

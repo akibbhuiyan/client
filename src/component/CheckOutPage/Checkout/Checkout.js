@@ -28,12 +28,16 @@ const Checkout = () => {
     return Number(pricision);
   };
   let total = 0;
+  let discount = 0;
   for (let i = 0; i < cartData.length; i++) {
     const cart = cartData[i];
     total = formatNumber(total + cart.price * (cart.quantity || 1));
+    discount = formatNumber(
+      discount + (cart.price * cart.discountPercentage) / 100
+    );
   }
   const tax = formatNumber(total * 0.035);
-  let discount = formatNumber(0.0);
+
   let shipping = 0;
   if (total > 1000) {
     shipping = 80;
@@ -42,7 +46,8 @@ const Checkout = () => {
   } else if (total > 100) {
     shipping = 200;
   }
-  const grandTotal = formatNumber(total + tax + shipping + discount);
+
+  const grandTotal = formatNumber(total + tax + shipping - discount);
 
   const onSubmit = (data) => {
     setactiveforPayment(true);
@@ -206,7 +211,7 @@ const Checkout = () => {
               </div>
             </form>
           </div>
-          <div className="col-md-6">
+          <div className="col-lg-6">
             <div className="your-order">
               <h3>Your Order</h3>
               <div className="your-order-table table-responsive">
@@ -221,7 +226,7 @@ const Checkout = () => {
                     {cartData.map((cart, idx) => (
                       <tr className="cart-item" key={idx}>
                         <td className="product-name">
-                          {cart.name}
+                          {cart.title}
                           <strong className="product-quantity">
                             × {cart.quantity}
                           </strong>

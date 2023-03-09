@@ -169,3 +169,23 @@
 .product-content .product-price {
   font-weight: 600;
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.pagination .pagi-btn {
+  background-color: transparent;
+  border: 1px solid #eaeaef;
+  line-height: 1.2;
+  display: inline-block;
+  padding: 12px 25px;
+  color: #525258;
+  font-weight: 600;
+}
+.pagination .pagi-btn:hover {
+  background-color: #f50963;
+  color: #fff;
+  box-shadow: 0 1px 2px rgba(3, 4, 28, 0.1);
+}

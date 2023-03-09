@@ -11,7 +11,7 @@ const Invoice = () => {
   const [cartArray, setCartArray] = useState([]);
   const componentRef = useRef();
   useEffect(() => {
-    fetch(`http://localhost:5000/findCartById?id=${id}`)
+    fetch(`https://thug-store-server.vercel.app/findCartById?id=${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);
@@ -23,13 +23,30 @@ const Invoice = () => {
         }
       });
   }, [id]);
-
+  const formatNumber = (num) => {
+    const pricision = num.toFixed(2);
+    return Number(pricision);
+  };
   let total = 0;
+  let discount = 0;
   for (let i = 0; i < cartArray.length; i++) {
     const carti = cartArray[i];
     total = total + carti.price * (carti.quantity || 1);
+    discount = formatNumber(
+      discount + (carti.price * carti.discountPercentage) / 100
+    );
   }
-  const grandtotal = total + 60;
+
+  let shipping = 0;
+  if (total > 1000) {
+    shipping = 80;
+  } else if (total > 500) {
+    shipping = 120;
+  } else if (total > 100) {
+    shipping = 200;
+  }
+  const tax = formatNumber(total * 0.035);
+  const grandtotal = total + tax + shipping - discount;
 
   return (
     <>
@@ -80,7 +97,7 @@ const Invoice = () => {
                 <div className="col-md-6 col-sm-4">
                   <div className="invoice_details mt-md-0 mt-20 text-md-end">
                     <p className="mb-0">
-                      <strong>Invoice ID:</strong> #{products.payId}
+                      <strong>Invoice ID:</strong> #{products.payID}
                     </p>
                     <p className="mb-0">
                       <strong>Date:</strong> {products.orderDate}
@@ -125,13 +142,13 @@ const Invoice = () => {
                 <div className="col-lg-3 col-md-4">
                   <div className="invoice_total_item">
                     <h5>Shipping Cost</h5>
-                    <p>$60</p>
+                    <p>${shipping}</p>
                   </div>
                 </div>
                 <div className="col-lg-3 col-md-4">
                   <div className="invoice_total_item">
                     <h5>Discount</h5>
-                    <p>$0.00</p>
+                    <p>${discount}</p>
                   </div>
                 </div>
                 <div className="col-lg-3 col-md-4">
