@@ -1,0 +1,36 @@
+.breadcrumb-area {
+  padding: 100px 0;
+  background-color: #f1f1f1;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.breadcrumb-title {
+  font-size: 70px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #03041e;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-family: "Space Grotesk", sans-serif;
+}
+.breadcrub-list {
+  margin-top: 31px;
+}
+.breadcrub-list span {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #6b6b7b;
+  display: inline-block;
+}
+.breadcrub-list span a {
+  color: #03041c;
+}
+.breadcrub-list span.dvdr {
+  font-size: 6px;
+  transform: translateY(-3px);
+  display: inline-block;
+  color: var(--tp-common-black);
+  padding: 0 12px;
+}

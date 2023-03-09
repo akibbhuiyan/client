@@ -1,0 +1,41 @@
+.profile_info-title {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.profile_input-box {
+  margin-bottom: 25px;
+  position: relative;
+}
+.profile_input-box input,
+.profile_input-box textarea {
+  height: 60px;
+  width: 100%;
+  line-height: 60px;
+  padding: 0 25px 0 50px;
+  outline: 0;
+  border: 1px solid #eaeaef;
+  color: #03041c;
+  background-color: #fff;
+}
+.profile_input-box textarea {
+  overflow: auto;
+  resize: none;
+  height: 200px;
+  padding: 20px;
+  line-height: normal;
+}
+.profile_input-box span {
+  position: absolute;
+  bottom: -23px;
+  left: 0;
+}
+.profile_input-box span.icon {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-25%);
+}
+.profile_input-box span.icon svg {
+  font-size: 21px;
+}

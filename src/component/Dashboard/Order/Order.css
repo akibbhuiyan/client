@@ -1,0 +1,35 @@
+.profile-ticket-table {
+  border: 1px solid #eaeaef;
+}
+.profile-ticket-table table thead tr {
+  background-color: transparent;
+}
+.profile-ticket-table .table > :not(caption) > * > * {
+  padding: 1rem 1.5rem;
+  border: 0;
+  box-shadow: none;
+}
+.profile-ticket-table table thead tr th {
+  color: #03041c;
+}
+.profile-ticket-table table tbody > tr th[scope="row"] {
+  color: #f50963;
+  overflow: hidden;
+  max-width: 100px;
+}
+.profile-ticket-table table tbody > tr .order-status {
+  color: #6364db;
+}
+.profile-ticket-table table tbody > tr td a {
+  padding: 7px 18px;
+  background-color: #f1f1f1;
+  min-width: 90px;
+  font-weight: 600;
+  color: #000;
+  display: inline-block;
+  transition: all 0.3s ease-out 0s;
+}
+.profile-ticket-table table tbody > tr td a:hover {
+  background-color: #f50963;
+  color: #fff;
+}

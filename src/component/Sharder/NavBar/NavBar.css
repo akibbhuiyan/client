@@ -1,0 +1,88 @@
+.header {
+  min-height: 80px;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  right: 0;
+  border-bottom: 1px solid #e2e2e2;
+  transition: all 0.4s ease-in-out;
+}
+.header.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(3, 4, 28, 0.1);
+  border: none;
+}
+
+.navbar-brand {
+  font-size: 27px;
+  font-weight: 900;
+  color: #fc371c !important;
+}
+.header .navbar-nav .nav-link {
+  color: #525258;
+}
+/* .header-right ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+.header-right ul .search_box {
+  position: relative;
+}
+.header-right ul .search_box input {
+  padding: 6px 13px;
+  border-radius: 5px;
+  border: 1px solid #79787852;
+  outline: none;
+}
+.header-right ul .search_box span {
+  position: absolute;
+  right: 24px;
+  top: 47%;
+  transform: translateY(-50%);
+  color: #525258;
+}
+.header-right ul li a {
+  color: #525258;
+  position: relative;
+}
+.header-right ul li a svg {
+  font-size: 18px;
+  font-weight: 800;
+}
+.header-right ul li {
+  padding: 13px;
+  display: inline-block;
+}
+.header-right ul li a .item-count {
+  position: absolute;
+  top: -6px;
+  right: -12px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #fc371c;
+  width: 23px;
+  height: 23px;
+  line-height: 17px;
+  border: 3px solid #fff;
+  text-align: center;
+  border-radius: 50%;
+}
+.avater {
+  border: 1px solid #eaeaef;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 33px;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 800;
+  font-family: "Roboto", sans-serif;
+}

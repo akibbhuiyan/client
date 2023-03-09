@@ -1,0 +1,26 @@
+.breadcrumb-content {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 20px;
+}
+.breadcrumb-content .breadcrumb-icon {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 19px;
+}
+.breadcrumb-content .breadcrumb-icon svg {
+  transform: translateY(-3px);
+}
+.breadcrumb-content span {
+  font-weight: 700;
+  font-size: 14px;
+  color: #525258;
+  display: inline-block;
+}
+.breadcrumb-content span a {
+  color: inherit;
+}

@@ -1,0 +1,166 @@
+.login-area {
+  padding: 110px 0;
+}
+.login-inner {
+  position: relative;
+  z-index: 1;
+}
+.login-inner .login-shape .shape {
+  position: absolute;
+  z-index: -1;
+}
+.login-inner .login-shape .shape-1 {
+  right: 14%;
+  bottom: 32%;
+}
+.login-inner .login-shape .shape-2 {
+  right: -1%;
+  bottom: 14%;
+}
+.shape-3 {
+  top: 35%;
+  left: 3%;
+}
+.shape-4 {
+  left: 18%;
+  bottom: 10%;
+}
+.shape-5 {
+  right: 20%;
+  top: 43%;
+}
+.shape-6 {
+  right: 22%;
+  top: 27%;
+}
+.login-wrapper {
+  padding: 50px 60px 55px;
+  box-shadow: 0 30px 60px rgba(3, 4, 28, 0.1);
+  background-color: #fff;
+}
+.login-top {
+  margin-bottom: 30px;
+}
+.login-title {
+  font-size: 34px;
+  letter-spacing: -0.04em;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #03041c;
+}
+.login-top p {
+  color: #525258;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  line-height: 26px;
+}
+.login-input-wrapper {
+  margin-bottom: 14px;
+}
+.login-input-item {
+  position: relative;
+}
+.login-input-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.login-input-item input {
+  background: #fff;
+  border: 1px solid #eaeaef;
+  padding-left: 55px;
+  padding-right: 50px;
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+  outline: none;
+  color: #03041c;
+  margin-bottom: 5px;
+}
+.login-input-item input::placeholder {
+  color: #84848b;
+}
+.login-input-item svg {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(calc(-50% - 0px));
+  font-size: 18px;
+}
+.login-input-item .showPass {
+  position: absolute;
+  right: 55px;
+  top: 50%;
+  transform: translateY(calc(-50% - 0px));
+}
+.login-option {
+  margin-bottom: 25px;
+}
+.login-remember input[type="checkbox"],
+.login-remember input[type="radio"] {
+  display: none;
+}
+.login-remember label {
+  padding-left: 30px;
+  position: relative;
+}
+.login-remember label::after,
+.login-remember label::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #eaeaef;
+  transition: all 0.2s ease-out 0s;
+}
+.login-remember label::before {
+  width: 14px;
+  height: 14px;
+  background-color: #f70762;
+  left: 3px;
+  top: 5px;
+  right: 3px;
+  bottom: 3px;
+  transform: scale(0);
+}
+.login-remember input[type="checkbox"]:checked ~ label::before,
+.login-remember input[type="radio"]:checked ~ label::before {
+  transform: scale(1);
+}
+.login-remember input[type="checkbox"]:checked ~ label::after,
+.login-remember input[type="radio"]:checked ~ label::after {
+  background-color: transparent;
+  border-color: #f70863;
+}
+.login-forgor a {
+  text-transform: capitalize;
+  color: #03041c;
+  font-size: 16px;
+  transition: all 0.4s ease-in-out;
+}
+.login-forgor a:hover {
+  color: #f70863;
+}
+.login-register-now p {
+  text-align: center;
+  color: #525258;
+  font-size: 16px;
+  font-weight: 500;
+}
+.login-register-now p span {
+  color: #f00861;
+  font-weight: 600;
+  margin-left: 4px;
+}
+.errorBox ul li {
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.errorBox ul li svg {
+  padding: 5px;
+  margin-top: 3px;
+}

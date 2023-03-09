@@ -1,0 +1,56 @@
+.profile-area {
+  padding: 110px 0;
+}
+.profile-tab {
+  margin-right: 40px;
+}
+.nav.nav-tab {
+  position: relative;
+  box-shadow: 0 30px 50px rgba(5, 47, 40, 0.12);
+  background-color: #fff;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+.profile-tab .nav.nav-tab .nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: #525258;
+  padding: 14px 30px;
+  background-color: #fff;
+  border: 0;
+  border-radius: 0;
+  text-align: left;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+.profile-tab .nav.nav-tab .nav-link:hover {
+  background-color: #f7f7f7;
+  isolation: isolate;
+}
+.profile-tab .nav.nav-tab .nav-link span {
+  margin-right: 7px;
+  font-size: 18px;
+}
+.profile-tab .nav.nav-tab .nav-link.active {
+  background-color: rgba(245, 9, 99, 0.06);
+  color: #f50963;
+}
+.fade:not(.show) {
+  opacity: 0;
+}
+.fade.show {
+  opacity: 1;
+}
+.fade {
+  transition: opacity 0.15s linear;
+  animation: opacityE 0.5s ease-in-out;
+}
+@keyframes opacityE {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

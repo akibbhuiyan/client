@@ -1,0 +1,86 @@
+.invoice_area {
+  padding: 110px 0;
+}
+.invoice_wrapper {
+  background-color: #f5f5f8;
+  padding: 40px;
+}
+
+.invoice_header-wrapper {
+  margin-bottom: 40px;
+  border-bottom: 2px solid #f9fcff;
+  padding-bottom: 20px;
+}
+.invoice-left .navbar-brand {
+  padding-bottom: 10px;
+  font-size: 25px;
+}
+.invoice-left p {
+  color: #525258;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+.invoice-right .title {
+  margin-bottom: 20px;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #03041c;
+}
+.invoice_customer {
+  margin-bottom: 30px;
+}
+.invoice_customer_details h4 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.invoice_customer_details p {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #525258;
+  margin-bottom: 4px;
+}
+.invoice_details p {
+  color: #525258;
+}
+.invoice_order-table {
+  padding: 40px;
+  margin-bottom: 30px;
+  background-color: #fff;
+}
+.table_group_devider tr td {
+  font-size: 13px;
+  font-weight: 600;
+}
+.invoice_total {
+  padding: 40px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+.invoice_total_item h5 {
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 16px;
+  color: #03041c;
+}
+.invoice_total_item p {
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 15px;
+  line-height: 26px;
+}
+.invoice_total_item .grandtotal {
+  font-weight: 700;
+}
+.invoice-print-btn {
+  padding: 8px 29px 10px;
+  background-color: #03041c;
+  color: #fff;
+  border: 0;
+  font-size: 16px;
+  font-weight: 600;
+}

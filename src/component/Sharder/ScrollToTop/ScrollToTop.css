@@ -1,0 +1,29 @@
+.scrollprogress {
+  background-color: #03cc65;
+  position: fixed;
+  bottom: -50px;
+  right: 10px;
+  height: 46px;
+  width: 46px;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00000054;
+  cursor: pointer;
+  z-index: 999;
+  display: grid;
+  transition: all 200ms linear;
+}
+.scrollprogress.progress-active {
+  bottom: 20px;
+}
+.progressvalue {
+  height: calc(100% - 4px);
+  width: calc(100% - 4px);
+  background-color: #000;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 19px;
+  color: #fff;
+  line-height: 36px;
+}
